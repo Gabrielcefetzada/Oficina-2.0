@@ -10,7 +10,7 @@ if(empty($_POST['usuario']) || empty($_POST['senha'])) {
 $usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
-$query = "select nome from usuario where usuario = '{$usuario}' and senha = md5('{$senha}')";
+$query = "SELECT usuario_id FROM usuario WHERE usuario = '{$usuario}' AND senha = md5('{$senha}')";
 
 $result = mysqli_query($conexao, $query);
 
@@ -18,7 +18,7 @@ $row = mysqli_num_rows($result);
 
 if($row == 1) {
 	$usuario_bd = mysqli_fetch_assoc($result);
-	$_SESSION['nome'] = $usuario_bd['nome'];
+	$_SESSION['usuario_id'] = $usuario_bd['usuario_id'];
 	header('Location: painel.php');
 	exit();
 } else {

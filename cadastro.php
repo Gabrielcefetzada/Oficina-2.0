@@ -65,7 +65,7 @@ session_start();
                     <label>Senha</label>
                     <div class="field">
                         <div class="control"> <!-- SENHA -->
-                            <input name="senha" type="text" class="input is-large" type="password">
+                            <input name="senha" class="input is-large" type="password">
                         </div>
                     </div>
                     <label>Vendedor</label>
@@ -76,28 +76,28 @@ session_start();
                     </div>
                     <label>Data e hora do orçamento</label>
                     <div class="field"> 
-                        <div class="control"> <!-- data e hora do orçamento -->
-                            <input name="datahora" class="input is-large" >
-                        </div>
+                        <div class="control">
+                            <input name="datahora" class="input is-large" type="text" placeholder="O sistema já identifica o horário." disabled>
+                      </div>
+                  </div>
+                  <label>Valor orçado</label>
+                  <div class="field"> 
+                    <div class="control"> <!-- Valor orçado -->
+                        <input name="valorOrcado" class="input is-large">
                     </div>
-                    <label>Valor orçado</label>
-                    <div class="field"> 
-                        <div class="control"> <!-- Valor orçado -->
-                            <input name="valorOrcado" class="input is-large">
-                        </div>
+                </div>
+                <label>Descrição do orçamento</label>
+                <div class="field">
+                    <div class="control"> <!-- descrição do orçamento -->
+                        <textarea name="descricao" class="input is-large" style="width: 350px; height: 150px;">
+                        </textarea>
                     </div>
-                    <label>Descrição do orçamento</label>
-                    <div class="field">
-                        <div class="control"> <!-- descrição do orçamento -->
-                            <textarea name="descricao" class="input is-large" style="width: 350px; height: 150px;">
-                            </textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="button is-block is-link is-large is-fullwidth">Cadastrar</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="button is-block is-link is-large is-fullwidth">Cadastrar</button>
+            </form>
         </div>
     </div>
+</div>
 </div>
 </section>
 </body>

@@ -19,7 +19,7 @@ if($row['total'] == 1) {
 	exit;
 }
 
-$sql = "INSERT INTO usuario (nome, usuario, senha, data_cadastro, vendedor, valor, descricao) VALUES ('$nome', '$usuario', '$senha', NOW(), '$vendedor', '$valorOrcado', '$descricao')";
+$sql = "INSERT INTO usuario (nome, usuario, senha, data_cadastro, vendedor, valor, descricao) VALUES ('$nome', '$usuario', '$senha', NOW(), '$vendedor', '$valor', '$descricao')";
 
 if($conexao->query($sql) === TRUE) {
 	$_SESSION['status_cadastro'] = true;
