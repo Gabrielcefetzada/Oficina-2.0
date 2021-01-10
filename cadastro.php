@@ -53,25 +53,25 @@ session_start();
                     <label>Nome do cliente</label>
                     <div class="field">
                         <div class="control"> <!-- nome do cliente -->
-                            <input name="nome" type="text" class="input is-large" autofocus>
+                            <input name="nome" type="text" class="input is-large" autofocus required>
                         </div>
                     </div>
                     <label>Usuário</label>
                     <div class="field">
                         <div class="control"> <!-- usuario -->
-                            <input name="usuario" type="text" class="input is-large">
+                            <input name="usuario" type="text" class="input is-large" required> 
                         </div>
                     </div>
                     <label>Senha</label>
                     <div class="field">
                         <div class="control"> <!-- SENHA -->
-                            <input name="senha" class="input is-large" type="password">
+                            <input name="senha" class="input is-large" type="password" required>
                         </div>
                     </div>
                     <label>Vendedor</label>
                     <div class="field">
                         <div class="control"> <!-- vendedor -->
-                            <input name="vendedor" class="input is-large">
+                            <input name="vendedor" class="input is-large" required>
                         </div>
                     </div>
                     <label>Data e hora do orçamento</label>
@@ -83,7 +83,7 @@ session_start();
                   <label>Valor orçado</label>
                   <div class="field"> 
                     <div class="control"> <!-- Valor orçado -->
-                        <input name="valorOrcado" class="input is-large">
+                        <input name="valorOrcado" class="input is-large" required>
                     </div>
                 </div>
                 <label>Descrição do orçamento</label>

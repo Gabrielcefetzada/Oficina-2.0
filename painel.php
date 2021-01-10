@@ -5,7 +5,7 @@ include('conexao.php');
 $sql_consulta = mysqli_query($conexao, "SELECT * FROM login.usuario");
 
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
 	<meta charset="utf-8">
@@ -35,6 +35,7 @@ $sql_consulta = mysqli_query($conexao, "SELECT * FROM login.usuario");
 					<th>Valor orçado</th>
 					<th>Descrição do orçamento</th>
 					<th>Cadastrado(a) em</th>
+					<th>Ação</th>
 				</tr>
 			</thead>
 			<?php
@@ -50,10 +51,13 @@ $sql_consulta = mysqli_query($conexao, "SELECT * FROM login.usuario");
 						<td><?php echo $dado['vendedor'];?></td>
 						<td><?php echo $dado['valor'];?></td>
 						<td><?php echo $dado['descricao'];?></td>
-						<td><?php echo $dado['data_cadastro'];?></td>
-					</tr>
-				<?php } ?>
-			</table>
-		</div>
-	</body>
-	</html>
+						<td><?php echo date("d/m/Y", strtotime($dado['data_cadastro']));?></td>
+						<td style="max-width: 160px">
+							<a href="excluir.php?usuario_id=<?php echo $dado['usuario_id'];?>"><button class="button is-info" style="margin-bottom: 6px;">Editar orçamento</button></a>
+							<a href="excluir.php?usuario_id=<?php echo $dado['usuario_id'];?>"><button class="button is-danger">Excluír orçamento</button></a></td>
+						</tr>
+					<?php } ?>
+				</table>
+			</div>
+		</body>
+		</html>
