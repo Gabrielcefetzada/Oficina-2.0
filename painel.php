@@ -53,7 +53,7 @@ $sql_consulta = mysqli_query($conexao, "SELECT * FROM login.usuario");
 						<td><?php echo $dado['descricao'];?></td>
 						<td><?php echo date("d/m/Y", strtotime($dado['data_cadastro']));?></td>
 						<td style="max-width: 160px">
-							<a href="excluir.php?usuario_id=<?php echo $dado['usuario_id'];?>"><button class="button is-info" style="margin-bottom: 6px;">Editar orçamento</button></a>
+							<a href="editar.php?usuario_id=<?php echo $dado['usuario_id'];?>"><button class="button is-info" style="margin-bottom: 6px;">Editar orçamento</button></a>
 							<a href="excluir.php?usuario_id=<?php echo $dado['usuario_id'];?>"><button class="button is-danger">Excluír orçamento</button></a></td>
 						</tr>
 					<?php } ?>
