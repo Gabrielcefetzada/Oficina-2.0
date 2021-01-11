@@ -20,6 +20,7 @@ $busca_sql = "SELECT * FROM usuario WHERE usuario_id = '$identificador'";
 		<br></br>
 	<h3 class="title has-text-grey">OFICINA 2.0</h3>
 	<h3 class="title has-text-grey">Edição de dados</h3>
+	<h2><a href="painel.php">Voltar ao painel de orçamentos</a></h2>
 <div class="content">	
 		<table class="table">
 			<thead>
