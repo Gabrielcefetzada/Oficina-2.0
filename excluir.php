@@ -13,13 +13,13 @@ $busca_sql = "SELECT * FROM usuario WHERE usuario_id = '$identificador'";
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/bulma.min.css" />
 	<link rel="stylesheet" href="estilos.css" />
-	<title>Editar orçamentos</title>
+	<title>Excluír orçamentos</title>
 </head>
 <body>
 	<div class="container has-text-centered">
 		<br></br>
 	<h3 class="title has-text-grey">OFICINA 2.0</h3>
-	<h3 class="title has-text-grey">Edição de dados</h3>
+	<h3 class="title notification is-danger">Cuidado! Zona para exclusão de dados!</h3>
 <div class="content">	
 		<table class="table">
 			<thead>
@@ -45,7 +45,7 @@ $busca_sql = "SELECT * FROM usuario WHERE usuario_id = '$identificador'";
 		$descricao = $dado['descricao'];
 
 		echo ("<br></br>
-			<form action = 'salvar.php' method = 'POST'>
+			<form action = 'salvarExclusao.php' method = 'POST'>
 			<tr>
 			<td>
 			<input class='input is-medium' type='text' value='" . $usuario_id . "' disabled>
@@ -67,7 +67,7 @@ $busca_sql = "SELECT * FROM usuario WHERE usuario_id = '$identificador'";
 			<input class='input is-medium' type='textarea' name='descricao' value='" . $descricao . "'>
 			</td>
 			<td>
-			<input class='button is-link input is-medium' type='submit' value='Salvar Mudanças'>
+			<input class='button is-danger input is-medium' type='submit' value='Excluír orçamento'>
 			</td>
 			</tr>
 			</form>

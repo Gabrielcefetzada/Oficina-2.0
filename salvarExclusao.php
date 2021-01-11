@@ -8,14 +8,14 @@ $vendedor = $_POST['vendedor'];
 $valor = $_POST['valor'];
 $descricao = $_POST['descricao'];
 
-$salvar = "UPDATE usuario SET nome = '$nome', usuario = '$usuario', vendedor = '$vendedor', valor = '$valor', descricao = '$descricao' WHERE usuario_id = '$usuario_id'";
+$salvar = "DELETE FROM usuario WHERE usuario_id = '$usuario_id'";
 
 $query = mysqli_query($conexao, $salvar);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Editar orçamentos</title>
+	<title>Excluír orçamentos</title>
 	<link rel="stylesheet" href="css/bulma.min.css" />
 </head>
 <body>
@@ -26,7 +26,7 @@ $query = mysqli_query($conexao, $salvar);
 		?>
 		<div class="container has-text-centered">
 			<br></br>
-			<h2 class="title is-3" style="color: green;">Dados de <?php echo $_POST['nome'];?> alterados com sucesso!</h2>
+			<h2 class="title is-3" style="color: green;">Dados de <?php echo $_POST['nome'];?> excluídos com sucesso!</h2>
 			<h2><a href="painel.php">Voltar ao painel de orçamentos</a></h2>
 		</div>
 		<?php
